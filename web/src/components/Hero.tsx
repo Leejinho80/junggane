@@ -18,7 +18,7 @@ export default function Hero() {
   const hoursText = `영업시간: 월 ${formatDayHours(hours.monday)} / 화~금 ${formatDayHours(hours.tuesday)} / 토·일 ${formatDayHours(hours.saturday)}`;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
       {/* 배경 이미지 - Unsplash 무료 이미지 */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -110,7 +110,7 @@ export default function Hero() {
 
         {/* 영업시간 */}
         <div
-          className="mt-16 text-white/70 text-sm animate-fade-in-up space-y-1"
+          className="mt-10 md:mt-16 mb-20 md:mb-0 text-white/70 text-sm animate-fade-in-up space-y-1"
           style={{ animationDelay: '1s' }}
         >
           <p>{hoursText}</p>
@@ -118,8 +118,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 스크롤 인디케이터 */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* 스크롤 인디케이터 - 모바일에서 숨김 */}
+      <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
           <div className="w-1.5 h-3 bg-white/70 rounded-full" />
         </div>
