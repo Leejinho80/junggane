@@ -141,7 +141,7 @@ export default function Location() {
                   <Users className="w-3 h-3" /> 단체 이용
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#FFF8DC] rounded-full text-xs text-[#666]">
-                  <Car className="w-3 h-3" /> 주차 불가
+                  <Car className="w-3 h-3" /> 주차 가능
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#FFF8DC] rounded-full text-xs text-[#666]">
                   <Dog className="w-3 h-3" /> 반려동물
