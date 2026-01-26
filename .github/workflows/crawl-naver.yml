@@ -1,0 +1,69 @@
+name: Crawl Naver Place Data
+
+on:
+  schedule:
+    # Run every day at 6:00 AM KST (21:00 UTC previous day)
+    - cron: '0 21 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium
+
+      - name: Run crawler
+        id: crawl
+        run: |
+          node scripts/crawl-and-update.js 2>&1 | tee crawl-output.txt
+          echo "output<<EOF" >> $GITHUB_OUTPUT
+          cat crawl-output.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet web/src/data/store-data.json; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add web/src/data/store-data.json
+          git commit -m "chore: auto-update store data from Naver Place
+
+          $(cat crawl-output.txt | grep -A 100 '=== Changes detected ===' || echo 'Data refreshed')"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## Crawl Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.changes.outputs.has_changes }}" == "true" ]; then
+            echo "Changes were detected and committed." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No changes detected." >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Output" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat crawl-output.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY

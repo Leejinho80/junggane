@@ -1,0 +1,496 @@
+{
+  "정가네닭국수": {
+    "colors": {
+      "primary": {
+        "brown": {
+          "value": "#8B4513",
+          "type": "color",
+          "description": "메인 브랜드 컬러 - 새들브라운"
+        },
+        "dark": {
+          "value": "#5D2E0C",
+          "type": "color",
+          "description": "다크 브라운 - 헤더, 강조"
+        }
+      },
+      "secondary": {
+        "cream": {
+          "value": "#FFF8DC",
+          "type": "color",
+          "description": "콘실크 - 메인 배경"
+        },
+        "beige": {
+          "value": "#F5F5DC",
+          "type": "color",
+          "description": "베이지 - 섹션 배경"
+        },
+        "warm": {
+          "value": "#FAEBD7",
+          "type": "color",
+          "description": "안티크화이트 - 카드 배경"
+        }
+      },
+      "accent": {
+        "orange": {
+          "value": "#CD853F",
+          "type": "color",
+          "description": "페루 - CTA 버튼"
+        },
+        "gold": {
+          "value": "#B8860B",
+          "type": "color",
+          "description": "다크골든로드 - 호버 상태"
+        }
+      },
+      "text": {
+        "primary": {
+          "value": "#333333",
+          "type": "color",
+          "description": "본문 텍스트"
+        },
+        "secondary": {
+          "value": "#666666",
+          "type": "color",
+          "description": "서브 텍스트"
+        },
+        "light": {
+          "value": "#999999",
+          "type": "color",
+          "description": "비활성 텍스트"
+        },
+        "white": {
+          "value": "#FFFFFF",
+          "type": "color",
+          "description": "밝은 배경 위 텍스트"
+        }
+      },
+      "semantic": {
+        "success": {
+          "value": "#4CAF50",
+          "type": "color"
+        },
+        "warning": {
+          "value": "#FF9800",
+          "type": "color"
+        },
+        "error": {
+          "value": "#F44336",
+          "type": "color"
+        }
+      },
+      "background": {
+        "hero-overlay": {
+          "value": "linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)",
+          "type": "color",
+          "description": "히어로 이미지 오버레이"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": {
+          "value": "Pretendard, -apple-system, BlinkMacSystemFont, sans-serif",
+          "type": "fontFamilies",
+          "description": "메인 폰트 - 본문용"
+        },
+        "accent": {
+          "value": "NanumMyeongjo, Nanum Myeongjo, serif",
+          "type": "fontFamilies",
+          "description": "포인트 폰트 - 제목용 (전통미)"
+        }
+      },
+      "fontSize": {
+        "desktop": {
+          "hero": {
+            "value": "48",
+            "type": "fontSizes",
+            "description": "히어로 타이틀"
+          },
+          "h1": {
+            "value": "36",
+            "type": "fontSizes",
+            "description": "섹션 타이틀"
+          },
+          "h2": {
+            "value": "28",
+            "type": "fontSizes",
+            "description": "서브 타이틀"
+          },
+          "h3": {
+            "value": "22",
+            "type": "fontSizes",
+            "description": "카드 타이틀"
+          },
+          "body": {
+            "value": "16",
+            "type": "fontSizes",
+            "description": "본문"
+          },
+          "small": {
+            "value": "14",
+            "type": "fontSizes",
+            "description": "캡션"
+          },
+          "caption": {
+            "value": "12",
+            "type": "fontSizes",
+            "description": "푸터, 법적 고지"
+          }
+        },
+        "mobile": {
+          "hero": {
+            "value": "32",
+            "type": "fontSizes"
+          },
+          "h1": {
+            "value": "26",
+            "type": "fontSizes"
+          },
+          "h2": {
+            "value": "22",
+            "type": "fontSizes"
+          },
+          "h3": {
+            "value": "18",
+            "type": "fontSizes"
+          },
+          "body": {
+            "value": "15",
+            "type": "fontSizes"
+          },
+          "small": {
+            "value": "13",
+            "type": "fontSizes"
+          }
+        }
+      },
+      "fontWeight": {
+        "regular": {
+          "value": "400",
+          "type": "fontWeights"
+        },
+        "medium": {
+          "value": "500",
+          "type": "fontWeights"
+        },
+        "semibold": {
+          "value": "600",
+          "type": "fontWeights"
+        },
+        "bold": {
+          "value": "700",
+          "type": "fontWeights"
+        }
+      },
+      "lineHeight": {
+        "tight": {
+          "value": "1.3",
+          "type": "lineHeights",
+          "description": "제목용"
+        },
+        "normal": {
+          "value": "1.6",
+          "type": "lineHeights",
+          "description": "본문용"
+        },
+        "relaxed": {
+          "value": "1.8",
+          "type": "lineHeights",
+          "description": "넓은 간격"
+        }
+      }
+    },
+    "spacing": {
+      "xs": {
+        "value": "4",
+        "type": "spacing"
+      },
+      "sm": {
+        "value": "8",
+        "type": "spacing"
+      },
+      "md": {
+        "value": "16",
+        "type": "spacing"
+      },
+      "lg": {
+        "value": "24",
+        "type": "spacing"
+      },
+      "xl": {
+        "value": "32",
+        "type": "spacing"
+      },
+      "2xl": {
+        "value": "48",
+        "type": "spacing"
+      },
+      "3xl": {
+        "value": "64",
+        "type": "spacing"
+      },
+      "4xl": {
+        "value": "96",
+        "type": "spacing"
+      }
+    },
+    "borderRadius": {
+      "sm": {
+        "value": "4",
+        "type": "borderRadius"
+      },
+      "md": {
+        "value": "8",
+        "type": "borderRadius"
+      },
+      "lg": {
+        "value": "12",
+        "type": "borderRadius"
+      },
+      "xl": {
+        "value": "16",
+        "type": "borderRadius"
+      },
+      "full": {
+        "value": "9999",
+        "type": "borderRadius"
+      }
+    },
+    "boxShadow": {
+      "sm": {
+        "value": "0 1px 3px rgba(0,0,0,0.08)",
+        "type": "boxShadow"
+      },
+      "md": {
+        "value": "0 2px 10px rgba(0,0,0,0.08)",
+        "type": "boxShadow",
+        "description": "카드 기본"
+      },
+      "lg": {
+        "value": "0 8px 25px rgba(0,0,0,0.12)",
+        "type": "boxShadow",
+        "description": "카드 호버"
+      },
+      "cta": {
+        "value": "0 4px 15px rgba(205,133,63,0.4)",
+        "type": "boxShadow",
+        "description": "CTA 버튼"
+      }
+    },
+    "breakpoints": {
+      "sm": {
+        "value": "640",
+        "type": "dimension",
+        "description": "태블릿 세로"
+      },
+      "md": {
+        "value": "768",
+        "type": "dimension",
+        "description": "태블릿 가로"
+      },
+      "lg": {
+        "value": "1024",
+        "type": "dimension",
+        "description": "노트북"
+      },
+      "xl": {
+        "value": "1280",
+        "type": "dimension",
+        "description": "데스크톱"
+      },
+      "2xl": {
+        "value": "1536",
+        "type": "dimension",
+        "description": "대형 모니터"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "primary": {
+        "background": {
+          "value": "{정가네닭국수.colors.primary.brown}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{정가네닭국수.colors.text.white}",
+          "type": "color"
+        },
+        "paddingX": {
+          "value": "{정가네닭국수.spacing.xl}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{정가네닭국수.spacing.md}",
+          "type": "spacing"
+        },
+        "borderRadius": {
+          "value": "{정가네닭국수.borderRadius.md}",
+          "type": "borderRadius"
+        },
+        "fontSize": {
+          "value": "{정가네닭국수.typography.fontSize.desktop.body}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{정가네닭국수.typography.fontWeight.semibold}",
+          "type": "fontWeights"
+        },
+        "hover": {
+          "background": {
+            "value": "{정가네닭국수.colors.primary.dark}",
+            "type": "color"
+          }
+        }
+      },
+      "secondary": {
+        "background": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "color": {
+          "value": "{정가네닭국수.colors.primary.brown}",
+          "type": "color"
+        },
+        "borderColor": {
+          "value": "{정가네닭국수.colors.primary.brown}",
+          "type": "color"
+        },
+        "borderWidth": {
+          "value": "2",
+          "type": "borderWidth"
+        }
+      },
+      "cta": {
+        "background": {
+          "value": "{정가네닭국수.colors.accent.orange}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{정가네닭국수.colors.text.white}",
+          "type": "color"
+        },
+        "paddingX": {
+          "value": "36",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "18",
+          "type": "spacing"
+        },
+        "borderRadius": {
+          "value": "{정가네닭국수.borderRadius.full}",
+          "type": "borderRadius"
+        },
+        "fontWeight": {
+          "value": "{정가네닭국수.typography.fontWeight.bold}",
+          "type": "fontWeights"
+        },
+        "boxShadow": {
+          "value": "{정가네닭국수.boxShadow.cta}",
+          "type": "boxShadow"
+        }
+      }
+    },
+    "card": {
+      "background": {
+        "value": "#FFFFFF",
+        "type": "color"
+      },
+      "borderRadius": {
+        "value": "{정가네닭국수.borderRadius.lg}",
+        "type": "borderRadius"
+      },
+      "boxShadow": {
+        "default": {
+          "value": "{정가네닭국수.boxShadow.md}",
+          "type": "boxShadow"
+        },
+        "hover": {
+          "value": "{정가네닭국수.boxShadow.lg}",
+          "type": "boxShadow"
+        }
+      },
+      "padding": {
+        "value": "{정가네닭국수.spacing.lg}",
+        "type": "spacing"
+      }
+    },
+    "section": {
+      "paddingY": {
+        "desktop": {
+          "value": "80",
+          "type": "spacing"
+        },
+        "mobile": {
+          "value": "48",
+          "type": "spacing"
+        }
+      },
+      "title": {
+        "fontFamily": {
+          "value": "{정가네닭국수.typography.fontFamily.accent}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{정가네닭국수.typography.fontSize.desktop.h1}",
+          "type": "fontSizes"
+        },
+        "color": {
+          "value": "{정가네닭국수.colors.primary.brown}",
+          "type": "color"
+        },
+        "marginBottom": {
+          "value": "{정가네닭국수.spacing.2xl}",
+          "type": "spacing"
+        }
+      }
+    },
+    "header": {
+      "height": {
+        "desktop": {
+          "value": "80",
+          "type": "dimension"
+        },
+        "mobile": {
+          "value": "64",
+          "type": "dimension"
+        }
+      },
+      "background": {
+        "value": "#FFFFFF",
+        "type": "color"
+      },
+      "boxShadow": {
+        "value": "0 2px 10px rgba(0,0,0,0.05)",
+        "type": "boxShadow"
+      }
+    },
+    "floatingButton": {
+      "size": {
+        "value": "56",
+        "type": "dimension"
+      },
+      "background": {
+        "value": "{정가네닭국수.colors.accent.orange}",
+        "type": "color"
+      },
+      "borderRadius": {
+        "value": "{정가네닭국수.borderRadius.full}",
+        "type": "borderRadius"
+      },
+      "boxShadow": {
+        "value": "0 4px 20px rgba(205,133,63,0.5)",
+        "type": "boxShadow"
+      },
+      "bottom": {
+        "value": "24",
+        "type": "spacing"
+      },
+      "right": {
+        "value": "24",
+        "type": "spacing"
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "lastUpdated": "2026-01-26T00:00:00.000Z",
+  "rating": 4.64,
+  "reviewCount": 285,
+  "phone": "0507-1400-6859",
+  "address": "서울특별시 강서구 금낭화로23길 25 상가동 1층 108호",
+  "hours": {
+    "monday": { "open": "11:00", "close": "15:00", "lastOrder": "14:30" },
+    "tuesday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
+    "wednesday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
+    "thursday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
+    "friday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
+    "saturday": { "closed": true },
+    "sunday": { "closed": true }
+  },
+  "menu": [
+    {
+      "id": 1,
+      "name": "닭칼국수",
+      "price": "11,000원",
+      "priceNum": 11000,
+      "description": "신선한 닭반마리와 야채로 우려낸 담백하고 깔끔한 닭칼국수",
+      "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200522_90%2F1590137864572FoXU0_JPEG%2FKMyNj-ZYr7tWSZ5p-yVh_rtX.jpg",
+      "popular": true
+    },
+    {
+      "id": 2,
+      "name": "닭개장 칼국수",
+      "price": "11,000원",
+      "priceNum": 11000,
+      "description": "신선한 닭과 야채로 얼큰한 국물에 쫄깃한 생면을 만나 더욱 맛있는 닭개장 칼국수",
+      "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200522_250%2F1590137889347LS9bY_JPEG%2FQe3pWKVowQVdg6F8wOhoGTSl.jpg",
+      "popular": true
+    },
+    {
+      "id": 3,
+      "name": "닭한마리 (2~3인)",
+      "price": "38,000원",
+      "priceNum": 38000,
+      "description": "진하고 시원한 육수와 신선하고 건강한 닭으로 만든 정가네 대표 닭한마리 칼국수",
+      "image": "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201029_2%2F1603946418291SFlFe_JPEG%2FiA9HrYlsaNNhTqbiLc33VYhs.jpg",
+      "popular": true
+    },
+    {
+      "id": 4,
+      "name": "닭개장",
+      "price": "10,000원",
+      "priceNum": 10000,
+      "description": "신선한 닭과 야채로 우려낸 얼큰하고 시원한 닭개장",
+      "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200522_161%2F1590137877963pRCdm_JPEG%2FG-zBHBKg7kdGcRVJvZztx9Pv.jpg",
+      "popular": false
+    },
+    {
+      "id": 5,
+      "name": "반계탕",
+      "price": "11,000원",
+      "priceNum": 11000,
+      "description": "신선한 닭반마리와 야채로 우려낸 담백하고 깔끔한 반계탕",
+      "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201104_170%2F1604482284448WFVbs_JPEG%2F4rjfPXbRfdfMTDwbn-AXTP6E.jpg",
+      "popular": false
+    },
+    {
+      "id": 6,
+      "name": "닭볶음탕 (3~4인)",
+      "price": "48,000원",
+      "priceNum": 48000,
+      "description": "매콤달콤하게 졸인 닭볶음탕, 푸짐한 양으로 온 가족이 함께",
+      "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230307_254%2F1678197918707lV1dH_JPEG%2F1536143011669.jpg",
+      "popular": false
+    }
+  ],
+  "otherMenu": [
+    { "name": "닭곰탕", "price": "10,000원" },
+    { "name": "칼국수", "price": "9,000원" },
+    { "name": "소주/맥주", "price": "3,000~5,000원" },
+    { "name": "음료", "price": "2,000원" }
+  ]
+}

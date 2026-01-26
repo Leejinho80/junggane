@@ -1,0 +1,86 @@
+[
+  {
+    "name": "본죽",
+    "url": "https://www.bonif.co.kr",
+    "desktop": {
+      "title": "본아이에프",
+      "hasNavigation": true,
+      "hasHero": false,
+      "hasFooter": true,
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "SUIT, sans-serif"
+    },
+    "mobile": {
+      "hasHamburgerMenu": false,
+      "hasTelLink": true
+    },
+    "performance": {
+      "loadTime": 7226,
+      "loadTimeSeconds": "7.23"
+    },
+    "status": "success"
+  },
+  {
+    "name": "신전떡볶이",
+    "url": "https://www.sinjeon.co.kr",
+    "desktop": {
+      "title": "신전떡볶이",
+      "hasNavigation": false,
+      "hasHero": false,
+      "hasFooter": false,
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "NanumSR, \"Nanum Gothic\", 돋움, Dotum, AppleGothic, sans-serif"
+    },
+    "mobile": {
+      "hasHamburgerMenu": false,
+      "hasTelLink": false
+    },
+    "performance": {
+      "loadTime": 2926,
+      "loadTimeSeconds": "2.93"
+    },
+    "status": "success"
+  },
+  {
+    "name": "명동칼국수",
+    "url": "http://mdkgs.co.kr",
+    "desktop": {
+      "title": "명동칼국수",
+      "hasNavigation": true,
+      "hasHero": false,
+      "hasFooter": false,
+      "backgroundColor": "rgb(255, 255, 255)",
+      "fontFamily": "Lato, \"Nanum Gothic\", 굴림, Gulim, 돋움, Dotum, \"Lucida Sans\", \"Trebuchet MS\", Arial, Tahoma, sans-serif"
+    },
+    "mobile": {
+      "hasHamburgerMenu": false,
+      "hasTelLink": true
+    },
+    "performance": {
+      "loadTime": 2174,
+      "loadTimeSeconds": "2.17"
+    },
+    "status": "success"
+  },
+  {
+    "name": "현풍닭칼국수",
+    "url": "http://hyunpungkalguksu.com",
+    "desktop": {
+      "title": "현풍닭칼국수",
+      "hasNavigation": true,
+      "hasHero": false,
+      "hasFooter": true,
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "\"Noto Sans KR\", sans-serif"
+    },
+    "mobile": {
+      "hasHamburgerMenu": false,
+      "hasTelLink": true
+    },
+    "performance": {
+      "loadTime": 4703,
+      "loadTimeSeconds": "4.70"
+    },
+    "status": "success"
+  }
+]

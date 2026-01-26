@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Test outputs
+test-results/
+screenshots/
+*.png
+
+# Misc
+.DS_Store
+*.log
+nul
+
+# Environment
+.env*
+
+# MCP config (local)
+.mcp.json
