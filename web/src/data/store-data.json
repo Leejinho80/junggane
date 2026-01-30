@@ -1,17 +1,41 @@
 {
-  "lastUpdated": "2026-01-26T00:00:00.000Z",
+  "lastUpdated": "2026-01-30T01:34:41.881Z",
   "rating": 4.64,
   "reviewCount": 285,
   "phone": "0507-1400-6859",
   "address": "서울특별시 강서구 금낭화로23길 25 상가동 1층 108호",
   "hours": {
-    "monday": { "open": "11:00", "close": "15:00", "lastOrder": "14:30" },
-    "tuesday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
-    "wednesday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
-    "thursday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
-    "friday": { "open": "11:00", "close": "22:00", "lastOrder": "21:30" },
-    "saturday": { "closed": true },
-    "sunday": { "closed": true }
+    "monday": {
+      "open": "11:00",
+      "close": "15:00",
+      "lastOrder": "14:30"
+    },
+    "tuesday": {
+      "open": "11:00",
+      "close": "22:00",
+      "lastOrder": "21:30"
+    },
+    "wednesday": {
+      "open": "11:00",
+      "close": "22:00",
+      "lastOrder": "21:30"
+    },
+    "thursday": {
+      "open": "11:00",
+      "close": "22:00",
+      "lastOrder": "21:30"
+    },
+    "friday": {
+      "open": "11:00",
+      "close": "22:00",
+      "lastOrder": "21:30"
+    },
+    "saturday": {
+      "closed": true
+    },
+    "sunday": {
+      "closed": true
+    }
   },
   "menu": [
     {
@@ -70,9 +94,21 @@
     }
   ],
   "otherMenu": [
-    { "name": "닭곰탕", "price": "10,000원" },
-    { "name": "칼국수", "price": "9,000원" },
-    { "name": "소주/맥주", "price": "3,000~5,000원" },
-    { "name": "음료", "price": "2,000원" }
+    {
+      "name": "닭곰탕",
+      "price": "10,000원"
+    },
+    {
+      "name": "칼국수",
+      "price": "9,000원"
+    },
+    {
+      "name": "소주/맥주",
+      "price": "3,000~5,000원"
+    },
+    {
+      "name": "음료",
+      "price": "2,000원"
+    }
   ]
 }
