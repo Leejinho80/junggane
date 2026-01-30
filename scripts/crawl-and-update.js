@@ -151,9 +151,19 @@ async function parseNews(page) {
           }
         }
 
-        // Parse date
-        const dateMatch = itemText.match(/(\d{4}\.\d{2}\.\d{2})/);
-        const date = dateMatch ? dateMatch[1] : '';
+        // Parse date (absolute date or relative time)
+        let date = '';
+        const absoluteDateMatch = itemText.match(/(\d{4}\.\d{2}\.\d{2})/);
+        if (absoluteDateMatch) {
+          date = absoluteDateMatch[1];
+        } else {
+          // Handle relative time like "4분 전", "1시간 전" - use today's date
+          const relativeMatch = itemText.match(/(\d+)(분|시간|일)\s*전/);
+          if (relativeMatch) {
+            const now = new Date();
+            date = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}.${String(now.getDate()).padStart(2, '0')}`;
+          }
+        }
 
         if (title) {
           news.push({
