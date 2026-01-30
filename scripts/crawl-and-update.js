@@ -63,6 +63,16 @@ async function crawlNaverPlace() {
     const menuContent = await page.locator('body').innerText();
     const menu = parseMenu(menuContent);
 
+    // Navigate to news/feed page
+    console.log('Crawling news feed...');
+    await page.goto(`https://m.place.naver.com/restaurant/${NAVER_PLACE_ID}/feed`, {
+      waitUntil: 'networkidle',
+      timeout: 30000,
+    });
+    await page.waitForTimeout(3000);
+
+    const news = await parseNews(page);
+
     await browser.close();
 
     return {
@@ -70,6 +80,7 @@ async function crawlNaverPlace() {
       reviewCount,
       hours,
       menu: menu.length > 0 ? menu : null,
+      news: news.length > 0 ? news : null,
       crawledAt: new Date().toISOString(),
     };
   } catch (error) {
@@ -100,6 +111,66 @@ function parseHours(text, dayKr) {
     }
   }
   return null;
+}
+
+async function parseNews(page) {
+  const news = [];
+
+  try {
+    // Get all list items in the feed
+    const listItems = page.locator('ul > li');
+    const count = await listItems.count();
+
+    // Get first 3 news items
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      const item = listItems.nth(i);
+      const itemText = await item.innerText();
+      const lines = itemText.split('\n').map(l => l.trim()).filter(l => l);
+
+      if (lines.length >= 2) {
+        // Parse type (알림, 임시휴무, NEW, etc.)
+        let type = '알림';
+        const typeMatch = lines.find(l => /^(알림|임시휴무|NEW|공지)/.test(l));
+        if (typeMatch) {
+          type = typeMatch.match(/^(알림|임시휴무|NEW|공지)/)[1];
+        }
+
+        // Find title (usually after type or contains key info)
+        let title = '';
+        let content = '';
+
+        for (const line of lines) {
+          if (line.includes('정가네닭국수')) continue;
+          if (/^\d{4}\.\d{2}\.\d{2}/.test(line)) continue;
+          if (/^(알림|임시휴무|NEW|공지)\s/.test(line)) {
+            title = line.replace(/^(알림|임시휴무|NEW|공지)\s*/, '');
+          } else if (!title && line.length > 5) {
+            title = line;
+          } else if (title && line.length > 10 && !content) {
+            content = line;
+          }
+        }
+
+        // Parse date
+        const dateMatch = itemText.match(/(\d{4}\.\d{2}\.\d{2})/);
+        const date = dateMatch ? dateMatch[1] : '';
+
+        if (title) {
+          news.push({
+            id: i + 1,
+            type,
+            title: title.substring(0, 50),
+            content: content || title,
+            date,
+          });
+        }
+      }
+    }
+  } catch (e) {
+    console.log('Error parsing news:', e.message);
+  }
+
+  return news;
 }
 
 function parseMenu(text) {
@@ -170,6 +241,20 @@ async function updateDataFile(crawledData) {
         existingItem.price = newItem.price;
         existingItem.priceNum = newItem.priceNum;
       }
+    }
+  }
+
+  // Update news
+  if (crawledData.news && crawledData.news.length > 0) {
+    const existingFirstNews = existingData.news?.[0];
+    const newFirstNews = crawledData.news[0];
+
+    // Check if there's a new news item (compare first item's title and date)
+    if (!existingFirstNews ||
+        existingFirstNews.title !== newFirstNews.title ||
+        existingFirstNews.date !== newFirstNews.date) {
+      changes.push(`News updated: ${newFirstNews.title}`);
+      existingData.news = crawledData.news;
     }
   }
 
