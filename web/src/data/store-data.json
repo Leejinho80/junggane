@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-28T21:22:32.745Z",
+  "lastUpdated": "2026-03-01T21:24:56.183Z",
   "rating": 4.64,
   "reviewCount": 286,
   "phone": "0507-1400-6859",
@@ -10,11 +10,7 @@
       "close": "15:00",
       "lastOrder": "14:30"
     },
-    "tuesday": {
-      "open": "11:30",
-      "close": "22:00",
-      "lastOrder": "21:30"
-    },
+    "tuesday": null,
     "wednesday": {
       "open": "11:30",
       "close": "22:00",
@@ -33,7 +29,9 @@
     "saturday": {
       "closed": true
     },
-    "sunday": null
+    "sunday": {
+      "closed": true
+    }
   },
   "news": [
     {
