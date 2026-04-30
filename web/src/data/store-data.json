@@ -1,37 +1,17 @@
 {
-  "lastUpdated": "2026-04-29T21:59:18.308Z",
+  "lastUpdated": "2026-04-30T21:57:03.663Z",
   "rating": 4.64,
   "reviewCount": 288,
   "phone": "0507-1400-6859",
   "address": "서울특별시 강서구 금낭화로23길 25 상가동 1층 108호",
   "hours": {
-    "monday": {
-      "open": "11:30",
-      "close": "15:00",
-      "lastOrder": "14:30"
-    },
+    "monday": null,
     "tuesday": null,
-    "wednesday": {
-      "open": "11:30",
-      "close": "22:00",
-      "lastOrder": "21:30"
-    },
-    "thursday": {
-      "open": "11:30",
-      "close": "22:00",
-      "lastOrder": "21:30"
-    },
-    "friday": {
-      "open": "11:30",
-      "close": "22:00",
-      "lastOrder": "21:30"
-    },
-    "saturday": {
-      "closed": true
-    },
-    "sunday": {
-      "closed": true
-    }
+    "wednesday": null,
+    "thursday": null,
+    "friday": null,
+    "saturday": null,
+    "sunday": null
   },
   "news": [
     {
